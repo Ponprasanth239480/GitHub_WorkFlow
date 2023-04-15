@@ -25,7 +25,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        cache-dependency-path: './actions-app/_work/_actions/actions/setup-node/v3/__tests__/data/package-lock.json'
+        cache-dependency-path: './actions-app/_work/_actions/actions/setup-node/v3/__tests__/data/yarn.lock'
     - run: npm ci
     - run: npm run build --if-present
     - run: pm2 restart server.js
