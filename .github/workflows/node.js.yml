@@ -25,7 +25,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        cache-dependency-path: './actions-app/_work/_actions/actions/checkout/v3/package-lock.json'
+        cache-dependency-path: './actions-app/_work/_tool/node/18.16.0/x64/package-lock.json'
     - run: npm ci
     - run: npm run build --if-present
     - run: pm2 restart server.js
